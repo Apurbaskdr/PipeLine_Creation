@@ -39,4 +39,14 @@ models:
   first_project:
     # Applies to all files under models/example/
     example:
-      +materialized: table
+      +materialized: table`
+
+sources:
+  - name: raw_first_schema
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
