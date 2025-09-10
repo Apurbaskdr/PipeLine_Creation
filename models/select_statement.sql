@@ -1,0 +1,1 @@
+ select * from raw_db.raw_first_schema.customers
