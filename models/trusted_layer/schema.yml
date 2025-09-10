@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+    - name: trusted_employee
+      description: "A trusted employee model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
