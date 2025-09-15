@@ -8,20 +8,20 @@ models:
           - name: id
             description: "The primary key for this table"
             tests:
-                - unique
-                - severity: warn
-                - not_null
-                - severity: error
+                - unique:
+                    severity: warn
+                - not_null:
+                    severity: error
     - name: trusted_customers
       description: "A trusted customers model"
       columns:
           - name: email_id
             description: "The primary key for this table"
             tests:
-                - unique
-                - severity: warn
-                - not_null
-                - severity: error
+                - unique:
+                    severity: warn
+                - not_null:
+                    severity: error
     - name: trusted_orders
       description: "A trusted orders model"
       columns:
