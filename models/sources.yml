@@ -3,11 +3,11 @@ version: 2
 sources:
   - name: raw_first_schema
     database: raw_db
-    schema: first_schema
+    schema: raw_first_schema
     tables:
       - name: raw_customers
       - name: raw_orders
       - name: raw_payments
+      - name: raw_employee
         freshness:
           warn_after: {count: 24, period: hour}
-          error_after: {count: 48, period: hour}
